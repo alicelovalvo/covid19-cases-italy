@@ -28,7 +28,6 @@ def main():
                 df_hospital.loc[dt,reg] = row["totale_ospedalizzati"]
         
         
-        
     df_cases["Italia"] = df_cases.sum(axis=1)
     df_fatalities["Italia"] = df_fatalities.sum(axis=1)
     df_recovered["Italia"] = df_recovered.sum(axis=1)
@@ -39,8 +38,8 @@ def main():
     df_hospital.index.name = "Date"
     df_cases = df_cases.astype(int)
     df_fatalities = df_fatalities.astype(int)
-    df_recovered = df_fatalities.astype(int)
-    df_hospital = df_fatalities.astype(int)
+    df_recovered = df_recovered.astype(int)
+    df_hospital = df_hospital.astype(int)
     df_cases.to_csv("covid19_cases_italy.csv", index=True)
     df_fatalities.to_csv("covid19_fatalities_italy.csv", index=True)
     df_recovered.to_csv("covid19_recovered_italy.csv", index=True)
