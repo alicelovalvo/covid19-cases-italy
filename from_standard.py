@@ -13,6 +13,8 @@ def main():
 
     df_cases = pd.DataFrame()
     df_fatalities = pd.DataFrame()
+    df_recovered = pd.DataFrame()
+    df_hospital = pd.DataFrame()
         
     regioni = df_regione["denominazione_regione"].unique()
     
@@ -22,15 +24,27 @@ def main():
             if row["denominazione_regione"] == reg:
                 df_cases.loc[dt,reg] = row["totale_casi"]
                 df_fatalities.loc[dt,reg] = row["deceduti"]
-
+                df_recovered.loc[dt,reg] = row["dimessi_guariti"]
+                df_hospital.loc[dt,reg] = row["totale_ospedalizzati"]
+        
+        
+        
     df_cases["Italia"] = df_cases.sum(axis=1)
     df_fatalities["Italia"] = df_fatalities.sum(axis=1)
+    df_recovered["Italia"] = df_recovered.sum(axis=1)
+    df_hospital["Italia"] = df_hospital.sum(axis=1)
     df_cases.index.name = "Date"
     df_fatalities.index.name = "Date"
+    df_recovered.index.name = "Date"
+    df_hospital.index.name = "Date"
     df_cases = df_cases.astype(int)
     df_fatalities = df_fatalities.astype(int)
+    df_recovered = df_fatalities.astype(int)
+    df_hospital = df_fatalities.astype(int)
     df_cases.to_csv("covid19_cases_italy.csv", index=True)
     df_fatalities.to_csv("covid19_fatalities_italy.csv", index=True)
+    df_recovered.to_csv("covid19_recovered_italy.csv", index=True)
+    df_hospital.to_csv("covid19_hospital_italy.csv", index=True)
 
 
 if __name__ == "__main__":
