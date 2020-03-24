@@ -35,7 +35,7 @@ def main():
     df_recovered["Italia"] = df_recovered.sum(axis=1)
     df_hospital["Italia"] = df_hospital.sum(axis=1)
     df_intensive_care["Posti Occupati"] = df_intensive_care.sum(axis=1)
-    df_intensive_care["Posti Disponibili"] = '8000'
+    df_intensive_care["Posti Disponibili"] = '5324'
     df_cases.index.name = "Date"
     df_fatalities.index.name = "Date"
     df_recovered.index.name = "Date"
