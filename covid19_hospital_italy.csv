@@ -1,6 +1,6 @@
-Date,Abruzzo,Basilicata,P.A. Bolzano,Calabria,Campania,Emilia Romagna,Friuli Venezia Giulia,Lazio,Liguria,Lombardia,Marche,Molise,Piemonte,Puglia,Sardegna,Sicilia,Toscana,P.A. Trento,Umbria,Valle d'Aosta,Veneto,Italia
+Date,Abruzzo,Basilicata,P.A. Bolzano,Calabria,Campania,Emilia-Romagna,Friuli Venezia Giulia,Lazio,Liguria,Lombardia,Marche,Molise,Piemonte,Puglia,Sardegna,Sicilia,Toscana,P.A. Trento,Umbria,Valle d'Aosta,Veneto,Italia
 2020-02-24,0,0,0,0,0,12,0,2,0,95,0,0,2,0,0,0,0,0,0,0,16,127
-2020-02-25,0,0,1,0,0,17,0,2,1,104,0,0,2,0,0,2,2,0,0,0,19,150
+2020-02-25,0,0,1,0,0,17,0,2,1,104,0,0,2,0,0,1,2,0,0,0,19,149
 2020-02-26,0,0,1,0,0,23,0,0,6,104,1,0,2,0,0,1,2,0,0,0,24,164
 2020-02-27,1,0,1,0,2,42,0,0,9,213,3,0,2,1,0,1,2,0,0,0,27,304
 2020-02-28,1,0,1,0,2,62,0,0,9,282,5,0,7,1,0,1,5,0,0,0,33,409
@@ -35,3 +35,4 @@ Date,Abruzzo,Basilicata,P.A. Bolzano,Calabria,Campania,Emilia Romagna,Friuli Ven
 2020-03-28,381,45,276,129,595,4011,282,1118,1198,12471,1153,35,3533,661,117,512,1370,423,203,116,1903,30532
 2020-03-29,397,50,290,143,611,4102,296,1195,1243,12941,1168,34,3428,658,128,522,1386,431,212,116,1941,31292
 2020-03-30,391,54,293,148,594,4130,289,1233,1317,13145,1165,35,3437,696,137,559,1395,431,220,118,1989,31776
+2020-03-31,408,54,311,149,634,4118,275,1300,1332,13207,1115,37,3626,714,141,575,1413,434,219,117,2036,32215

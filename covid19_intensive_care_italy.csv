@@ -1,4 +1,4 @@
-Date,Abruzzo,Basilicata,P.A. Bolzano,Calabria,Campania,Emilia Romagna,Friuli Venezia Giulia,Lazio,Liguria,Lombardia,Marche,Molise,Piemonte,Puglia,Sardegna,Sicilia,Toscana,P.A. Trento,Umbria,Valle d'Aosta,Veneto,Posti Occupati,Posti Disponibili
+Date,Abruzzo,Basilicata,P.A. Bolzano,Calabria,Campania,Emilia-Romagna,Friuli Venezia Giulia,Lazio,Liguria,Lombardia,Marche,Molise,Piemonte,Puglia,Sardegna,Sicilia,Toscana,P.A. Trento,Umbria,Valle d'Aosta,Veneto,Posti Occupati,Posti Disponibili
 2020-02-24,0,0,0,0,0,2,0,1,0,19,0,0,0,0,0,0,0,0,0,0,4,26,5324
 2020-02-25,0,0,0,0,0,2,0,1,0,25,0,0,0,0,0,0,0,0,0,0,7,35,5324
 2020-02-26,0,0,0,0,0,3,0,0,0,25,0,0,0,0,0,0,0,0,0,0,8,36,5324
@@ -35,3 +35,4 @@ Date,Abruzzo,Basilicata,P.A. Bolzano,Calabria,Campania,Emilia Romagna,Friuli Ven
 2020-03-28,70,19,51,22,132,316,59,133,167,1319,166,9,439,98,22,71,277,72,44,26,344,3856,5324
 2020-03-29,68,18,56,19,135,333,60,133,166,1328,168,9,443,99,23,71,275,75,46,26,355,3906,5324
 2020-03-30,69,18,62,18,126,351,60,154,175,1330,167,8,452,106,24,75,279,78,47,26,356,3981,5324
+2020-03-31,73,17,62,17,133,353,60,173,179,1324,169,8,452,105,28,72,293,80,43,26,356,4023,5324

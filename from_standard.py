@@ -29,7 +29,7 @@ def main():
                 df_recovered.loc[dt,reg] = row["dimessi_guariti"]
                 df_hospital.loc[dt,reg] = row["totale_ospedalizzati"]
                 df_intensive_care.loc[dt,reg] = row["terapia_intensiva"]
-                df_positive_cases.loc[dt,reg] = row["totale_attualmente_positivi"]
+                df_positive_cases.loc[dt,reg] = row["totale_positivi"]
         
         
     df_cases["Italia"] = df_cases.sum(axis=1)
