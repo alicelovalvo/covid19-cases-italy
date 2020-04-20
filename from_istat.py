@@ -25,7 +25,7 @@ def main():
     # df_intensive_care = pd.DataFrame()
     # df_positive_cases = pd.DataFrame()
     df_fatalities_istat = pd.DataFrame()
-        
+    dt = [2019, 2020]
     regioni = df_regione["Region"].unique()
     
     for i, row in df.iterrows():    
@@ -33,21 +33,22 @@ def main():
         for reg in regioni:
             if row["Unnamed: 2"] == reg:
                 # print(row)
-                df_fatalities_istat.loc['2019', reg]= 0
-                df_fatalities_istat.loc['2020', reg]= 0
+                df_fatalities_istat.loc[dt[0], reg]= 0
+                df_fatalities_istat.loc[dt[1], reg]= 0
     
     
     for i, row in df.iterrows():    
         for reg in regioni:
             if row["Unnamed: 2"] == reg:
-                df_fatalities_istat.loc['2019', reg]+= row["Unnamed: 9"]
-                df_fatalities_istat.loc['2020', reg]+= row["Unnamed: 12"]
+                df_fatalities_istat.loc[dt[0], reg]+= row["Unnamed: 9"]
+                df_fatalities_istat.loc[dt[1], reg]+= row["Unnamed: 12"]
 
         
     df_fatalities_istat["Italia"] = df_fatalities_istat.sum(axis=1)
 
     df_fatalities_istat.index.name = "Date"
     df_fatalities_istat = df_fatalities_istat.astype(int)
+    print(df_fatalities_istat)
 
     df_fatalities_istat.to_csv("df_fatalities_istat.csv", index=True)
 
