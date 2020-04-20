@@ -14,7 +14,7 @@ def main():
     """ Transforms the data from the standards csv to my csv """
 
     df = pd.read_excel('Tavola_sintetica_ISTAT.xlsx', sheet_name='Totale per sesso')
-    
+    df = df.sort_values('Unnamed: 2')
     df_regione = pd.read_csv('regioni.csv', error_bad_lines=False)
 
 
