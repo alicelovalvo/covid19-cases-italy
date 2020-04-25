@@ -17,6 +17,8 @@ def main():
     df_hospital = pd.DataFrame()
     df_intensive_care = pd.DataFrame()
     df_positive_cases = pd.DataFrame()
+    df_daily_new_cases = pd.DataFrame()
+
         
     regioni = df_regione["denominazione_regione"].unique()
     
@@ -31,8 +33,18 @@ def main():
                 df_intensive_care.loc[dt,reg] = row["terapia_intensiva"]
                 df_positive_cases.loc[dt,reg] = row["totale_positivi"]
         
-        
+    l = len(df_cases)    
+    # print(df_cases.diff().iloc[l - 1].sum())
+    
+    
     df_cases["Italia"] = df_cases.sum(axis=1)
+    # print(df_cases.diff().iloc[l - 1]["Italia"])
+    # print(df_cases.diff().iloc[l - 1].sum() - df_cases.diff().iloc[l - 1]["Italia"])
+    
+    
+    for i in range(1,l):
+        df_daily_new_cases
+    
     df_fatalities["Italia"] = df_fatalities.sum(axis=1)
     df_recovered["Italia"] = df_recovered.sum(axis=1)
     df_hospital["Italia"] = df_hospital.sum(axis=1)
