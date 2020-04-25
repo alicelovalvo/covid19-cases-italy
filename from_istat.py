@@ -64,7 +64,7 @@ def main():
     df_fatalities_istat.index.name = "Date"
     df_fatalities_istat = df_fatalities_istat.astype(int)
 
-    df_percentage.loc[1,"Italia"] = (df_fatalities_istat.loc[dt[1], "Italia"] - df_fatalities_istat.loc[dt[0], "Italia"])/df_fatalities_istat.loc[dt[0], "Italia"]*100
+    df_percentage.loc[1,"Italia"] = (df_fatalities_istat.loc[dt[5], "Italia"] - df_fatalities_istat.loc[dt[4], "Italia"])/df_fatalities_istat.loc[dt[4], "Italia"]*100
 
     df_percentage.index.name = "Date"
     df_fatalities_istat.to_csv("df_fatalities_istat.csv", index=True)
