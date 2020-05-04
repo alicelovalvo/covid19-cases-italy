@@ -12,7 +12,7 @@ import pandas as pd
 def main():
     """ Transforms the data from the standards csv to my csv """
 
-    df = pd.read_excel('Tavola_sintetica_ISTAT.xlsx', sheet_name='Totale per sesso')
+    df = pd.read_excel('Tavola riepilogativa_31MARZO_ISTAT.xlsx', sheet_name='Totale per sesso')
     df_fatalities_years = pd.read_excel('totali_comunali_ISTAT.xlsx')
     df = df.sort_values('Unnamed: 2')
     df_regione = pd.read_csv('regioni.csv', error_bad_lines=False)
@@ -43,7 +43,8 @@ def main():
     for i, row in df_filter.iterrows():
         for reg in regioni:
             if row["NOME_REGIONE"] == reg:
-                if (row["MESE_DECESSO"] == 3) or (row["MESE_DECESSO"] == 4 and row["GIORNO_DECESSO"] < 5):
+                if (row["MESE_DECESSO"] == 3):
+                    #or (row["MESE_DECESSO"] == 4 and row["GIORNO_DECESSO"] < 5):
                     df_fatalities_istat.loc[dt[0], reg]+= row["DECESSI_2015"]
                     df_fatalities_istat.loc[dt[1], reg]+= row["DECESSI_2016"]
                     df_fatalities_istat.loc[dt[2], reg]+= row["DECESSI_2017"]
@@ -67,8 +68,8 @@ def main():
     df_percentage.loc[1,"Italia"] = (df_fatalities_istat.loc[dt[5], "Italia"] - df_fatalities_istat.loc[dt[4], "Italia"])/df_fatalities_istat.loc[dt[4], "Italia"]*100
 
     df_percentage.index.name = "Date"
-    df_fatalities_istat.to_csv("df_fatalities_istat.csv", index=True)
-    df_percentage.to_csv("df_percentage.csv", index=True)
+    df_fatalities_istat.to_csv("df_fatalities_istat_2.csv", index=True)
+    df_percentage.to_csv("df_percentage_2.csv", index=True)
 
 if __name__ == "__main__":
     main()
