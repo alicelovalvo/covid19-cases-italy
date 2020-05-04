@@ -53,8 +53,8 @@ def main():
     for i, row in df.iterrows():    
         for reg in regioni:
             if row["Unnamed: 2"] == reg:
-                df_fatalities_istat.loc[dt[4], reg]+= row["Unnamed: 9"]
-                df_fatalities_istat.loc[dt[5], reg]+= row["Unnamed: 12"]
+                df_fatalities_istat.loc[dt[4], reg]+= row["Unnamed: 8"]
+                df_fatalities_istat.loc[dt[5], reg]+= row["Unnamed: 11"]
 
     for reg in regioni:
         df_percentage.loc[1,reg] = (df_fatalities_istat.loc[dt[5], reg] - df_fatalities_istat.loc[dt[4], reg])/df_fatalities_istat.loc[dt[4], reg]*100
